@@ -63,7 +63,7 @@ function addToOrder(itemName) {
 
     // Calculate and update the total price
     const totalPrice = parseFloat(orderTotal.textContent) || 0;
-    const itemPrice = 50; // Assuming each item costs $10
+    const itemPrice = 10; // Assuming each item costs $10
     const newTotalPrice = totalPrice + itemPrice;
 
     // Update the text content of the order total element with the new total
