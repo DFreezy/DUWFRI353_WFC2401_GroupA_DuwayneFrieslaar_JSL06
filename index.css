@@ -100,3 +100,17 @@ font-weight: bold;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-size: 35px;
 }
+
+button {
+    background: #007bff;
+    color: black;
+    margin: 5px;
+    height: 20px;
+}
+
+button:hover {
+    background: crimson;
+    color: black;
+    margin: 5px;
+    height: 25px;
+}
