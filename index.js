@@ -53,29 +53,38 @@ function addToOrder(itemName) {
     const orderTotal = document.getElementById("order-total");
 
     // Create a list item for the order
-    const orderItem = document.createElement("li");
-
-    // Set the text content of the list item to the item name
+    const orderItem = document.createElement('li');
     orderItem.textContent = itemName;
-
-    // Append the list item to the order items list
+    orderItem.addEventListener('click', () => {
+        orderList.removeChild(orderItem); // Remove the clicked order item
+        updateTotal(); // Update the total after removing the item
+    });
     orderList.appendChild(orderItem);
 
-    // Calculate and update the total price
     const totalPrice = parseFloat(orderTotal.textContent) || 0;
-    const itemPrice = 50; // Assuming each item costs $10
+    const itemPrice = 150;
     const newTotalPrice = totalPrice + itemPrice;
 
-    // Update the text content of the order total element with the new total
-    orderTotal.textContent = newTotalPrice.toFixed(2); // Round to 2 decimal places
+    orderTotal.textContent = newTotalPrice.toFixed(2);
 }
 
-// Function to initialize the menu systems
+function updateTotal() {
+    const orderTotal = document.getElementById('order-total');
+    const orderItems = document.getElementById('order-items').getElementsByTagName('li');
+    let totalPrice = 0;
+
+    // Calculate the total price based on the remaining order items
+    for (let i = 0; i < orderItems.length; i++) {
+        totalPrice += 150; // Assuming each item costs $150
+    }
+
+    orderTotal.textContent = totalPrice.toFixed(2);
+}
+
 function initMenuSystem(menu) {
-    // Call the function to display menu items
     displayMenuItems(menu);
 }
 
-// Start the menu system by calling the init function
 initMenuSystem(menu);
+
 
