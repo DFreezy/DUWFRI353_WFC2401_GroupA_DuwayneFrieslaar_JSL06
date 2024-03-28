@@ -70,7 +70,7 @@ function addToOrder(itemName) {
     orderTotal.textContent = newTotalPrice.toFixed(2); // Round to 2 decimal places
 }
 
-// Function to initialize the menu system
+// Function to initialize the menu systems
 function initMenuSystem(menu) {
     // Call the function to display menu items
     displayMenuItems(menu);
