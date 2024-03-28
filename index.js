@@ -84,7 +84,12 @@ function updateTotal() {
 function initMenuSystem(menu) {
     displayMenuItems(menu);
 }
-
+   
 initMenuSystem(menu);
 
+function placeOrder(menu) {
+        alert('Thank you for shopping with us!');
+        placeOrder.innerHTML = 'Are you sure?';
+    }
 
+alert('Welcome!');
